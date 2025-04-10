@@ -1,14 +1,14 @@
--- testing
-print("enter filename:")
+local filename = arg[1]
 
-local fileName = io.read()
-print(fileName)
+if not filename then 
+    print("enter filename:")
+    fileName = io.read()
+end
 
-io.input(fileName)
+io.input(filename)
 local content = io.read("*all")
 
-tags = {}
 for tag in string.gmatch(content, "(#%a+)") do
-	print(tag)
+    print(tag)
 end
 
