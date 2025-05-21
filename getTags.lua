@@ -14,6 +14,7 @@ else
     local content = io.read("*all")
     
     for tag in string.gmatch(content, "(#%a+)") do
-        print(tag.." ") 
+        io.write(tag, " ") 
     end
+    io.write("\n")
 end
